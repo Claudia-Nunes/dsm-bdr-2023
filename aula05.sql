@@ -18,6 +18,8 @@ numero_emprestimo integer PRIMARY KEY,
 codigo_client int,
 codigo_livro int);
 
+
+
 CREATE TABLE tbl_livros (
 
 cod_livro integer PRIMARY KEY,
@@ -55,3 +57,26 @@ values
 (3,3,1),
 (4,4,5),
 (5,5,3);
+
+select*from tbl_cliente;
+
+select nome as nome_cliente,cidade
+from tbl_cliente
+where cidade = 'São Paulo';
+
+select nome as nome_cliente,codigo_cliente
+from tbl_cliente
+where codigo_cliente > 3;
+
+select titulo as todos_titulos
+from tbl_titulo;
+
+CREATE TABLE tbl_cliente2(
+codigo integer);
+
+insert into tbl_cliente2 (codigo)
+select codigo_cliente
+from tbl_cliente;
+
+
+
